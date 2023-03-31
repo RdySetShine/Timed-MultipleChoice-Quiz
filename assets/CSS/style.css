@@ -1,0 +1,46 @@
+/* 
+
+body{
+    background-image: url("../images/You\ cant\ Touch\ This!.jpeg");
+    opacity: 0.33;
+}
+
+// blur css and property //
+
+
+
+
+//
+
+function start(){
+
+    timerInterval = setInterval(function(){
+        count--;
+        timeShow.textContent = 'You have a ' + count
+    if (count === 0) {
+        alert("You're out of time!");
+        clearInterval(timerInterval)
+    }
+   
+  }, 1000);
+
+startBtn.style.display = "none";
+MainTitle.style.display = "none";
+title.style.display = "none";
+
+makequestion()
+
+}//
+
+
+
+
+
+
+
+
+
+
+
+*/
+

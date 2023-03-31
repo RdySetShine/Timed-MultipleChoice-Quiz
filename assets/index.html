@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <style>
+
+#count1 {
+        float: right;
+        border: 2px solid rgb(26, 25, 6);
+        border-radius: 8px;
+        border-width: 3px;
+        box-shadow: 5px 5px 5px black;
+        color: rgb(19, 172, 133);
+        font-size: 21px;
+        max-width: fit-content;
+        max-height: 100px;
+    
+        background-color: black;
+        text-align: right;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: inset;
+      
+        }
+
+#TD {
+    color: rgb(19, 172, 133);
+    font-size: 21px;
+    border: 2px solid rgb(26, 25, 6);
+    border-radius: 8px;
+    border-width: -1px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+   justify-content: center;
+margin-top: 25px;
+    max-width: fit-content;
+    max-height: 100px;
+
+    background-color: black;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+    }
+
+#title{
+       display: flex;
+       border: 10px;
+       color: rgb(19, 172, 133);
+       font-size: 20px;
+       border-radius: 8px;
+       box-shadow: 5px 5px 5px black;
+       display: flex;
+       justify-content: center;
+       max-width: fit-content;
+       max-height: 100px;
+       background-color: black;
+       text-align: right;
+       padding: 24px;
+       font-size: 44px;
+ 
+       margin-left: auto;
+       margin-right: auto;
+ 
+       background-color: black;
+       opacity: 0.95;
+       padding: 4px;
+       font-size: 28px;
+       display: flex;
+       justify-content: center;
+       }
+       
+
+body {
+justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  opacity: 0.85;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./Images/Pokemon.jpeg);
+background-repeat: no-repeat;
+background-size: 120% 155%;
+}
+
+main {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+           margin: 10px;
+           width: 250px;
+           opacity: 0.95;
+           border: 10px;
+           margin-left: auto;
+           margin-right: auto;
+           color: rgb(19, 172, 133);
+           font-size: 20px;
+           border-radius: 8px;
+           box-shadow: 5px 5px 5px black;
+           display: flex;
+           justify-content: center;
+
+           max-width: fit-content;
+           max-height: 100px;
+           
+           background-color: black;
+           text-align: right;
+  border-radius: 10px;
+}
+
+.start-btn {
+  text-align: center;
+}
+
+
+.MainTitle {
+           border: 10px;
+           color: rgb(19, 172, 133);
+           border-radius: 8px;
+           box-shadow: 5px 5px 5px black;
+           display: flex;
+           justify-content: center;
+           max-width: fit-content;
+           max-height: 100px;
+           background-color: black;
+           text-align: right;
+           padding: 24px;
+           font-size: 44px;
+           margin-top: 50px;
+           margin-left: auto;
+           margin-right: auto;
+           opacity: 0.95
+           }
+
+
+
+button:hover {
+opacity: 0.6;
+
+}
+img {
+
+box-shadow: 5px 5px 5px rgb(255,203,5);
+  margin-top: 25px;
+border-radius: 10px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 25px;
+height: 18.5%;
+width: 18.5%;
+
+}
+
+#question1, #question2, #question3, #question4 {
+                                               color: rgb(26, 25, 6);
+                                               }
+  </style>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>quiz</title>
+
+<div id="title" style="
+background-color: black;
+color: aquamarine;
+">Are You Ready?</div>
+
+</head>
+
+<body id="Wallart" style="
+
+">
+
+
+<!-- background-repeat: no-repeat;
+background-size: 120% 155%; -->
+
+  <header>
+
+<h1 class="MainTitle">Pokémon Coding Quiz</h1>
+
+</header>
+
+<main>
+
+<div id="score">
+<h2 style="text-align: center;">Pokémon Masteries!</h2>
+<ul id="HighScore"></ul>
+
+<button class="reset">re-Test Poké Knowledge</button>
+
+</div>
+
+
+  <button class="start-btn" style="
+    background-color: black;
+    color: aquamarine;
+    text-shadow: 3px;
+  
+  ">Click here to become a Pokémon Master</button>
+
+<div id="count1"></div>
+
+<img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/518tQIAApmL._AC_.jpg">
+
+
+  <div id="questionArea"></div>
+
+    <span id="ansResult"></span>
+ 
+<div id="questionArea"></div>
+
+<form id="nameform" method="POST">
+
+  <div class="input">
+    <label for="first-name"></label>
+    <input type="text" name="first-name" id="initials" required placeholder="Initials" />
+  </div>
+  <button id="submit">Enter Your Legacy</button>
+
+</form>
+
+<Footer id="TD">
+
+  <h4>
+ 
+    Made by Bruno Rosarini
+
+</h4>
+
+<p>
+
+    &copy; 2023
+     
+</p>
+
+ </Footer> 
+
+
+
+</main>
+
+<script src="./JS/style.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!--
+
+<div id="quiz" class="containter pt-5">
+
+<div id="question1" class="question">
+        <p class="display6">Which Pokemon has a single type of Fire?</p>
+        <label class="lead"> <input class="m-2" type="radio" name="question0" value="option1"> #0952  Scovillian, Type: Grass/Fire</label><br>
+        <label class="lead"> <input class="m-2" type="radio" name="question0" value="option2"> #0006  Charizard, Type: Fire/Flying</label><br>
+        <label class="lead"> <input class="m-2" type="radio" name="question0" value="option3"> #0157  Typhlosion, Type: Fire</label><br>
+        <label class="lead"> <input class="m-2" type="radio" name="question0" value="option4"> #0229  Houndoom, Type: Dark/Fire</label><br>
+</div>
+
+<div id="question2" class="question">
+       <p class="display6">Which Pokemon learns the move, Eruption?</p>
+       <label class="lead"> <input class="m-2" type="radio" name="question1" value="option1"> #0149  Dragonite, Type: Dragon/Flying</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question1" value="option2"> #0006  Charizard, Type: Fire/Flying</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question1" value="option3"> #0952  Scovillian, Type: Grass/Fire</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question1" value="option4"> #0157  Typhlosion, Type: Fire</label><br>
+</div>
+
+<div id="question3" class="question">
+       <p class="display6">How man Pokemon are there?</p>
+       <label class="lead"> <input class="m-2" type="radio" name="question2" value="option1"> #1010</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question2" value="option2"> #0855</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question2" value="option3"> #0342</label><br>
+       <label class="lead"> <input class="m-2" type="radio" name="question2" value="option4"> #0101</label><br>
+</div>
+
+<div id="question4" class="question">
+      <p class="display6">Which Pokemon is known as The God of all Pokémon and Creator of the Pokémon Universe?</p>
+     <label class="lead"> <input class="m-2" type="radio" name="question3" value="option1"> #0151  Mew, Type: Psychic</label><br>
+     <label class="lead"> <input class="m-2" type="radio" name="question3" value="option2"> #0493  Arceus, Type: Normal</label><br>
+     <label class="lead"> <input class="m-2" type="radio" name="question3" value="option3"> #0448  Lucario, Type: Fighting/Steel</label><br>
+     <label class="lead"> <input class="m-2" type="radio" name="question3" value="option4"> #0251  Celebi, Type: Psychic/Grass</label><br>
+</div>
+
+<button class="btn btn-primary mt-5" id="check answers" style=" margin-top: 2.5%;">Check Answers</button>
+
+<div id="results" class="alert alert-primary mt-5" role="alert"></div>
+
+</div>
+
+  <h1 class="MainTitle">Timed Coding Quiz</h1>
+
+  <main>
+
+    <button class="start-btn"> Start Now Fool!</button>
+
+    <div id="count1"></div>
+
+
+  </main>
+
+  
+</body>
+
+<script>
+
+   const quiz = document.getElementById("quiz");
+   const resultsConttainer = document.getElementById("results");
+   const submitButton = document.getElementById("check answers"); 
+   resultsConttainer.style.display = "none";
+
+  const questions = [
+    {
+      question: "Which Pokemon has a single type of Fire?" ,
+      answers: {
+
+                 option1: "#0952  Scovillian, Type: Grass/Fire",
+                 option2: "#0006  Charizard, Type: Fire/Flying",
+                 option3: "#0157  Typhlosion, Type: Fire",
+                 option4: "#0229  Houndoom, Type: Dark/Fire"
+      },
+      correctAnswer: "option3"
+
+  }, {
+       question: "Which Pokemon learns the move, Eruption?" ,
+       answers: {
+                  option1: "#0149  Dragonite, Type: Dragon/Flying",
+                  option2: " #0006  Charizard, Type: Fire/Flying",
+                  option3: "#0952  Scovillian, Type: Grass/Fire",
+                  option4: "#0157  Typhlosion, Type: Fire"
+       },
+       correctAnswer: "option4"
+
+}, {
+    question: "How man Pokemon are there?" ,
+    answers: {
+               option1: "#1010",
+               option2: "#0855",
+               option3: "#0342",
+               option4: "#0101"
+   },
+   correctAnswer: "option1"
+
+  }, {
+      question: "Which Pokemon is known as The God of all Pokémon and Creator of the Pokémon Universe?" ,
+      answers: {
+
+                option1: "#0151  Mew, Type: Psychic",
+                option2: "#0493  Arceus, Type: Normal",
+                option3: "#0448  Lucario, Type: Fighting/Steel",
+                option4: "#0251  Celebi, Type: Psychic/Grass"
+      },
+      correctAnswer: "option2"
+}];
+
+submitButton.addEventListener("click", showResults);
+
+ function showResults() {
+     let numCorrect = 0;
+
+     for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const answerContainer = quiz.querySelector(`[name-question${i}]:checked`);
+
+      if (!answerContainer) {
+          alert("Please select an answer for all questions.");
+          return;
+      }
+
+      const answer = answerContainer.value;
+      if (answer === question, correctAnswer) {
+        numCorrect++;
+      }
+
+     }
+
+     resultsConttainer.innerHTML = "You got" + numCorrect + " out of " + questions.length + " correct.";
+     resultsConttainer.style.display = "block";
+
+ }
+
+
+
+</script>
+-->
