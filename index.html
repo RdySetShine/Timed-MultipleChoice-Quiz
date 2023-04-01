@@ -6,6 +6,12 @@
 
   <style>
 
+#nameform {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+}
+
 #count1 {
         float: right;
         border: 2px solid rgb(26, 25, 6);
@@ -16,7 +22,6 @@
         font-size: 21px;
         max-width: fit-content;
         max-height: 100px;
-    
         background-color: black;
         text-align: right;
         margin-top: 15px;
@@ -24,7 +29,6 @@
         margin-left: auto;
         margin-right: auto;
         box-shadow: inset;
-      
         }
 
 #TD {
@@ -35,17 +39,14 @@
     border-width: -1px;
     box-shadow: 5px 5px 5px black;
     display: flex;
-   justify-content: center;
-margin-top: 25px;
+    justify-content: center;
+    margin-top: 25px;
     max-width: fit-content;
     max-height: 100px;
-
     background-color: black;
     text-align: right;
     margin-left: auto;
     margin-right: auto;
-   
-
     }
 
 #title{
@@ -63,10 +64,8 @@ margin-top: 25px;
        text-align: right;
        padding: 24px;
        font-size: 44px;
- 
        margin-left: auto;
        margin-right: auto;
- 
        background-color: black;
        opacity: 0.95;
        padding: 4px;
@@ -75,52 +74,48 @@ margin-top: 25px;
        justify-content: center;
        }
        
-
 body {
-justify-content: center;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  opacity: 0.85;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./Images/Pokemon.jpeg);
-background-repeat: no-repeat;
-background-size: 120% 155%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      opacity: 0.85;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) ,url("assets/Images/Pokemon.jpeg");
+      background-repeat: no-repeat;
+      background-size: 120% 155%;
 }
 
 main {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 
 button {
-           margin: 10px;
-           width: 250px;
-           opacity: 0.95;
-           border: 10px;
-           margin-left: auto;
-           margin-right: auto;
-           color: rgb(19, 172, 133);
-           font-size: 20px;
-           border-radius: 8px;
-           box-shadow: 5px 5px 5px black;
-           display: flex;
-           justify-content: center;
-
-           max-width: fit-content;
-           max-height: 100px;
-           
-           background-color: black;
-           text-align: right;
-  border-radius: 10px;
+          margin: 10px;
+          width: 250px;
+          opacity: 0.95;
+          border: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          color: rgb(19, 172, 133);
+          font-size: 20px;
+          border-radius: 8px;
+          box-shadow: 5px 5px 5px black;
+          display: flex;
+          justify-content: center;
+          max-width: fit-content;
+          max-height: 100px;
+          background-color: black;
+          text-align: right;
+          border-radius: 10px;
 }
 
 .start-btn {
+  font-size: 35px;
   text-align: center;
 }
-
 
 .MainTitle {
            border: 10px;
@@ -141,46 +136,39 @@ button {
            opacity: 0.95
            }
 
-
-
 button:hover {
-opacity: 0.6;
+             opacity: 0.6;
+             }
 
-}
 img {
-
-box-shadow: 5px 5px 5px rgb(255,203,5);
-  margin-top: 25px;
-border-radius: 10px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 25px;
-height: 18.5%;
-width: 18.5%;
-
+    box-shadow: 5px 5px 5px rgb(255,203,5);
+    margin-top: 25px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    height: 18.5%;
+    width: 18.5%;
 }
 
 #question1, #question2, #question3, #question4 {
                                                color: rgb(26, 25, 6);
                                                }
-  </style>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</style>
 
- <title>quiz</title>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./Assets/Css/script.css">
 
-<div id="title" style="
-background-color: black;
-color: aquamarine;
-">Are You Ready?</div>
+ <title>Pokémon Coding Quiz</title>
+
+ <div id="title" style="background-color: black;color: aquamarine;">Are You Ready?</div>
 
 </head>
 
-<body id="Wallart" style="
-
-">
+<body id="Wallart">
 
 
 <!-- background-repeat: no-repeat;
@@ -251,7 +239,7 @@ background-size: 120% 155%; -->
 
 </main>
 
-<script src="./JS/style.js"></script>
+<script src="./assets/JS/style.js"></script>
 
 </body>
 

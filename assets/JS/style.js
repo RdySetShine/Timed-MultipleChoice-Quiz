@@ -4,7 +4,7 @@ var timeShow = document.getElementById('count1');
 var MainTitle = document.querySelector(".MainTitle");
 var title = document.getElementById("title");
 var questionNumber = 0;
-var count = 60;
+var count = 65;
 var ansResult = document.getElementById("ansResult");
 var submitForm = document.getElementById("nameform");
 var submitButton = document.getElementById("submit");
@@ -12,16 +12,17 @@ var highScore = document.getElementById("score");
 var scoreList = document.getElementById("HighScore");
 var resetBtn = document.querySelector(".reset");
 
+var initialTime = 65;
+
 
 highScore.style.display="none";
-
+timeShow.style.display = "none"
 submitForm.style.display="none";
 scoreList.style.display="none";
 
-
 const quizquestions = [
   {
-    question: "Which Pokemon has a single type of Fire?",
+    question: "Which Pokémon has a single type of Fire?",
     answers: {
       option1: "#0952  Scovillian, Type: Grass/Fire",
       option2: "#0006  Charizard, Type: Fire/Flying",
@@ -31,7 +32,7 @@ const quizquestions = [
     correctAnswer: "option3"
   },
   {
-    question: "Which Pokemon learns the move, Eruption?",
+    question: "Which Pokémon learns the move, Eruption?",
     answers: {
       option1: "#0149  Dragonite, Type: Dragon/Flying",
       option2: " #0006  Charizard, Type: Fire/Flying",
@@ -41,7 +42,7 @@ const quizquestions = [
     correctAnswer: "option4"
   },
   {
-    question: "How many Pokemon are there?",
+    question: "How many Pokémon are there?",
     answers: {
       option1: "#1010",
       option2: "#0855",
@@ -51,7 +52,7 @@ const quizquestions = [
     correctAnswer: "option1"
   },
   {
-    question: "Which Pokemon is known as The God of all Pokémon and Creator of the Pokémon Universe?",
+    question: "Which Pokémon is known as The God of all Pokémon and Creator of the Pokémon Universe?",
     answers: {
       option1: "#0151  Mew, Type: Psychic",
       option2: "#0493  Arceus, Type: Normal",
@@ -61,9 +62,6 @@ const quizquestions = [
     correctAnswer: "option2"
   }
 ];
-
-
-
 
 function makequestion() {
     var questionDiv = document.createElement("div");
@@ -80,7 +78,6 @@ function makequestion() {
       ansResult.innerText = "";
       highScore.style.display="";
       submitForm.style.display="";
-
       return;
 
     }
@@ -100,7 +97,9 @@ function makequestion() {
           ansResult.innerText = "Correct Answer";
       } else {
           ansResult.innerText = "Incorrect!";
+          initialTime -= 10;
       }
+      
       questionNumber += 1;
       questionDiv.remove(); 
       makequestion();
@@ -111,6 +110,7 @@ function makequestion() {
           ansResult.innerText = "Correct Answer";
       } else {
           ansResult.innerText = "Incorrect!";
+          initialTime -= 10;
       }
       questionNumber += 1;
       questionDiv.remove(); 
@@ -122,6 +122,7 @@ function makequestion() {
           ansResult.innerText = "Correct Answer";
       } else {
           ansResult.innerText = "Incorrect!";
+          initialTime -= 10;
       }
       questionNumber += 1;
       questionDiv.remove(); 
@@ -133,6 +134,7 @@ function makequestion() {
           ansResult.innerText = "Correct Answer";
       } else {
           ansResult.innerText = "Incorrect!";
+          initialTime -= 10;
       }
       questionNumber += 1;
       questionDiv.remove(); 
@@ -147,94 +149,92 @@ function makequestion() {
     questionArea.appendChild(questionDiv);
   }
 
-  
-function start(){
-    timerInterval = setInterval(function(){
-        count--;
-        timeShow.textContent = 'You have a ' + count;
-    if (count === 0) {
-        alert("You're out of time!");
-        clearInterval(timerInterval);
-gameOver();
+  timerInterval = setInterval(function(){
+    initialTime--;
+    timeShow.textContent = 'You have ' + initialTime + ' seconds left.';
+    if (initialTime === 0) {
+      clearInterval(timerInterval);
+      alert("Game Over! Your Poké Knowledge is Inferior, Please Try Again.");
+      gameOver();
     }
   }, 1000);
+
+
+
+
+
+
+
+
+function start(){
+
+                timeShow.style.display = ""
+                timerInterval = setInterval(function(){
+                count--;
+                timeShow.textContent = 'You have a ' + count;
+if (count === 0) {
+                 alert("Game Over! Your Poké Knowledge is Inferior, Please Try Again.");
+                 clearInterval(timerInterval);
+                 gameOver();
+                 }}, 1000);
+
 startBtn.style.display = "none";
 MainTitle.style.display = "none";
 title.style.display = "none";
-makequestion();
+
+                 makequestion();
 }
 
 function gameOver(){
-    questionArea.style.display="none";
-submitForm.style.display="";
-
+                   questionArea.style.display="none";
+                   submitForm.style.display="";
 }
 
 playerStats = [];
 
-
-
 function score(){
-
-        initialString = localStorage.getItem("score");
-        highScore.style.display="";
-        submitForm.style.display="none";
+                initialString = localStorage.getItem("score");
+                highScore.style.display="";
+                submitForm.style.display="none";
         for (var i = 0 ; i < playerStats.length; i++){
-        var scoreId = document.createElement("li");
-        scoreId.textContent = playerStats[i].initial + " mastered pokemon with  " + playerStats[i].timeLeft + " seconds left ";
-        scoreList.appendChild(scoreId);
 
+var scoreId = document.createElement("li");
+scoreId.textContent = playerStats[i].initial + " mastered Pokémon with  " + playerStats[i].timeLeft + " seconds left ";
+scoreList.appendChild(scoreId);
+}};
 
-    } 
+submitButton.addEventListener("click", 
 
-}
-
-submitButton.addEventListener("click", function(event){
-
-    event.preventDefault();
-    var initial = document.querySelector('#initials');
-    var timeLeft = count
-    var playerScore = {
-        initial: initial, 
-        timeLeft: timeLeft
-    };
+           function(event){
+                    event.preventDefault();
+var initial = document.querySelector('#initials');
+var timeLeft = count
+var playerScore = {
+initial: initial, 
+timeLeft: timeLeft
+};
     
-    
-    localStorage.setItem(initial, timeLeft)
-    playerStats.push(playerScore);
-    questionArea.innerHTML = "Your Initials and Score: "+ timeLeft +" has been saved";
-    
-    score();
-    
-    
-    
-    })
-    
- 
+localStorage.setItem(initial, timeLeft)
+playerStats.push(playerScore);
+questionArea.innerHTML = "Your Initials and Score: "+ timeLeft +" has been saved";
+score();
+})
+     
 resetBtn.addEventListener("click", () => {
-  window.location.reload();
-
-
+window.location.reload();
 });
 
-
-
 for (var i = 0 ; i < localStorage.length; i++){
-    var key = localStorage.key(i);
-    var value = localStorage.getItem(key);
+
+var key = localStorage.key(i);
+var value = localStorage.getItem(key);
 var playerScore = {
-    initial: key,
-    timeLeft: value
+initial: key,
+timeLeft: value
 };
 
-
 playerStats.push(playerScore);
-
 }
 
 // this should make a question and put it on the page //
 startBtn.addEventListener('click', start)
-
-
-
-

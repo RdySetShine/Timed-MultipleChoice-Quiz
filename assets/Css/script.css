@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap%27');
+
+@media screen and (max-width:350px) {
+
+    .MainTitle {
+        flex-wrap: wrap;
+        font-size: 19px;
+    } 
+}
+
+*{
+  font-family: 'VT323', monospace;
+ }
