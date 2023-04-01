@@ -160,12 +160,6 @@ function makequestion() {
   }, 1000);
 
 
-
-
-
-
-
-
 function start(){
 
                 timeShow.style.display = ""

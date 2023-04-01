@@ -11,8 +11,8 @@
 
   ```
   ## Mock Up:
-
-![Alt text](./Assets/Images/PokeQuiz.png)
+  
+![Alt text](assets/Images/PokemonQuiz2.png)
 
   ## Author:
   ```
