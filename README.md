@@ -11,9 +11,9 @@
 
   ```
   ## Mock Up:
-  ```
+
 ![Alt text](Assets/Images/PokeQuiz.png)
-```
+
   ## Author:
   ```
   - Bruno Rosarini 
