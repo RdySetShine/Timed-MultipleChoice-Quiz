@@ -11,7 +11,7 @@
 
   ```
   ## Mock Up:
-  
+
 ![Alt text](assets/Images/PokemonQuiz2.png)
 
   ## Author:
@@ -24,3 +24,4 @@
  -  Keegan Omel
   ```
   ## Live Link:
+  url: https://rdysetshine.github.io/Timed-MultipleChoice-Quiz/
