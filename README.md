@@ -12,7 +12,7 @@
   ```
   ## Mock Up:
 
-![Alt text](Assets/Images/PokeQuiz.png)
+![Alt text](./Assets/Images/PokeQuiz.png)
 
   ## Author:
   ```
